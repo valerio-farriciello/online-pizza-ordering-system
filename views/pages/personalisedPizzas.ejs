@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head.ejs %>
+
+    <body>
+        <% include ../partials/options.ejs %>
+        <main id="personalisedPizza">
+            <form name=personalisedPizzasForm" method="POST" action="http://localhost:3000/personalisedPizzas">
+                <p class="option">CRUST SIZE:</p>
+                <input type="radio" name="crustSize" value="Small Crust">Small<br>
+                <input type="radio" name="crustSize" value="Medium Crust" checked>Medium<br>
+                <input type="radio" name="crustSize" value="Large Crust">Large<br><br><br>
+
+                <p class="option">CRUST FLAVOR:</p>
+                <input type="radio" name="crustFlavor" value="Standard Flavour Crust" checked>Standard Flavour<br>
+                <input type="radio" name="crustFlavor" value="Garlic Crust" >Garlic<br>
+                <input type="radio" name="crustFlavor" value="Cheese Filled Crust">Cheese Filled<br><br><br>
+
+                <p class="option">CHEESE:</p>
+                <input type="radio" name="cheese" value="c" checked>Cheese<br>
+                <input type="radio" name="cheese" value="cc">Double Cheese<br>
+                <input type="radio" name="cheese" value="nc">No Cheese<br><br><br>
+
+                <p id="optionVeg">
+                <input type="radio" id = "displayVeg" name="toppings" checked>VEGETARIAN<br>
+                <input type="radio" id = "displayNonVeg" name="toppings">NON-VEGETARIAN<br>
+                </p>
+
+
+                <div id = "vegetarian">
+                    <p class="option">VEGETARIAN TOPPINGS:</p>
+                    <%for(let i = 2; i < toppings.length; i++){%>
+                        <%if(toppings[i].isVegetarian){%>
+                            <input type="checkbox" name="toppingID" value="<%=toppings[i].toppingID%>"><%=toppings[i].name%> (€<%=toppings[i].price%>)<br>
+                        <%}%>
+                    <%}%><br><br><br>
+                </div>
+
+                <div id = "notVegetarian">
+                    <p class="option">NON-VEGETARIAN TOPPINGS:</p>
+                    <%for(let i = 2; i < toppings.length; i++){%>
+                    <%if(!toppings[i].isVegetarian){%>
+                    <input type="checkbox" name="toppingID" value="<%=toppings[i].toppingID%>"><%=toppings[i].name%> (€<%=toppings[i].price%>)<br>
+                    <%}%>
+                    <%}%><br><br><br>
+                </div>
+
+
+                <p class="option">SAUCES:</p>
+                <input type="radio" name="sauce" value="BBQ Sauce">BBQ<br>
+                <input type="radio" name="sauce" value="Marinara Sauce" checked>Marinara<br>
+                <input type="radio" name="sauce" value="Ranch Sauce">Ranch<br>
+                <input type="radio" name="sauce" value="Sriracha Sauce">Sriracha<br>
+                <input type="radio" name="sauce" value="Hot Sauce">Hot<br>
+                <input type="radio" name="sauce" value="No Sauce">No Sauce<br><br><br>
+
+                <p class="option">QUANTITY:</p>
+                <select name="quantity">
+                    <option value= 1>1</option>
+                    <option value= 2>2</option>
+                    <option value= 3>3</option>
+                    <option value= 4>4</option>
+                    <option value= 5>5</option>
+                    <option value= 6>6</option>
+                    <option value= 7>7</option>
+                    <option value= 8>8</option>
+                    <option value= 9>9</option>
+                </select><br><br><br>
+
+                <%if(isLoggedIn){%>
+                    <button type="submit" class = "buttons">Add to your cart</button>
+                <%}%>
+            </form>
+        </main>
+
+       <% include ../partials/footer.ejs %>
+    </body>
+    <script>
+        let vegContent = document.getElementById("vegetarian");
+        let nonVegContent = document.getElementById("notVegetarian");
+        let inputVeg = document.getElementById("displayVeg");
+        let inputNotVeg = document.getElementById("displayNonVeg");
+        if(inputVeg.checked) showVeg();
+        inputVeg.onclick = showVeg;
+        inputNotVeg.onclick = showNotVeg;
+
+        function showVeg(){
+            vegContent.style.display = "block";
+            nonVegContent.style.display = "none";
+        }
+
+        function showNotVeg(){
+            vegContent.style.display = "none";
+            nonVegContent.style.display = "block";
+        }
+
+    </script>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head.ejs %>
+
+    <body>
+       <% include ../partials/options.ejs %>
+
+       <main id="collection">
+           <form method="POST" action="http://localhost:3000/collection">
+               <h1>COLLECTION</h1>
+               <hr>
+               <p class = "errorMessage"><%=errorMessage%></p>
+               <label for="collectionName"><b>Full name of the person that will collect the order</b></label>
+               <input type="text" placeholder='Enter your name' name = "fullName">
+
+               <label for="phoneNumber"><b>Phone number</b></label>
+               <input type="text" placeholder="Enter your phone number" name = "phoneNumber">
+
+               <hr>
+
+               <button type="submit" class = "buttons">PLACE THE ORDER</button>
+
+           </form>
+       </main>
+
+       <% include ../partials/footer.ejs %>
+    </body>
+</html>

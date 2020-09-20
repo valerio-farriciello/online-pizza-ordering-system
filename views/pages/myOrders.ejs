@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head.ejs %>
+
+    <body>
+        <% include ../partials/options.ejs %>
+
+        <main id="orders">
+            <%for(let i = 0; i < ordersAndPayments.orders.length; i++){%>
+            <p><span class="orderAttribute">ORDER ID: </span><%=ordersAndPayments.orders[i].orderID%></p>
+                <p><span class="orderAttribute">NAME: </span><%=ordersAndPayments.orders[i].name%></p>
+                <%if(ordersAndPayments.orders[i].address === null){%>
+                    <p><span class="orderAttribute">METHOD: </span> Collection</p>
+                <%}else{%>
+                    <p><span class="orderAttribute">METHOD: </span> Delivery</p>
+                    <p><span class="orderAttribute">DELIVERY ADDRESS: </span> <%=ordersAndPayments.orders[i].address%></p>
+                <%}%>
+
+                <p><span class="orderAttribute">PHONE NUMBER: </span> <%=ordersAndPayments.orders[i].phoneNumber%></p>
+                <%if(ordersAndPayments.orders[i].optionalEmail !== null){%>
+                    <p><span class="orderAttribute">OPTIONAL EMAIL: </span> <%=ordersAndPayments.orders[i].optionalEmail%></p>
+                <%}%>
+                <p><span class="orderAttribute">PAYMENT METHOD: </span> <%=ordersAndPayments.payments[i].paymentMethod%></p>
+                <%if(ordersAndPayments.payments[i].paymentMethod === "card"){%>
+                <p><span class="orderAttribute">CARD NUMBER: </span> <%=ordersAndPayments.payments[i].cardNumber%></p>
+                <p><span class="orderAttribute">EXPIRY DATE: </span> <%=ordersAndPayments.payments[i].expiryDate%></p>
+                <p><span class="orderAttribute">CVV: </span> <%=ordersAndPayments.payments[i].cvv%></p>
+                <%}%>
+                <p><span class="orderAttribute">ITEMS ORDERED:</span></p>
+
+                <%for(let k = 0; k < ordersAndPayments.setMenuPizzas[i].item.length; k++){%>
+                <p class = itemAttribute><%=ordersAndPayments.setMenuPizzas[i].item[k]%> (QTY: <%=ordersAndPayments.setMenuPizzas[i].quantity[k]%>)</p>
+                <%}%>
+
+                <%for(let k = 0; k < ordersAndPayments.sides[i].item.length; k++){%>
+                <p class = itemAttribute><%=ordersAndPayments.sides[i].item[k]%> (QTY: <%=ordersAndPayments.sides[i].quantity[k]%>)</p>
+                <%}%>
+
+                <%for(let k = 0; k < ordersAndPayments.cyo[i].crustFlavor.length; k++){%>
+            <p><span class = "itemAttribute">PERSONALISED PIZZA #<%=(k+1)%> (QTY: <%=ordersAndPayments.cyo[i].quantity[k]%>)</span><br>
+                <span class = "cyoAttribute">CRUST FLAVOR:</span> <%=ordersAndPayments.cyo[i].crustFlavor[k]%><br>
+                <span class = "cyoAttribute">CRUST SIZE:</span> <%=ordersAndPayments.cyo[i].crustSize[k]%><br>
+                <span class = "cyoAttribute">SAUCE:</span> <%=ordersAndPayments.cyo[i].sauce[k]%><br>
+                    <%let toppingList = ordersAndPayments.cyo[i].toppings[k]%>
+                <span class = "cyoAttribute">TOPPINGS:</span><%for(let j = 0; j < toppingList.length; j++){%>
+                        <%=toppingList[j]%><%if((j+1) !== toppingList.length){%>
+                            <%=", "%>
+                        <%}%>
+                    <%}%>
+            </p>
+
+                <%}%>
+
+                <p><span class="orderAttribute">TOTAL PAID: </span> €<%=ordersAndPayments.payments[i].totalPaid%></p>
+                <%if((i+1) !== ordersAndPayments.orders.length){%>
+                <hr>
+                <%}%>
+
+
+            <%}%>
+        </main>
+
+       <% include ../partials/footer.ejs %>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head.ejs %>
+
+    <body>
+       <% include ../partials/options.ejs %>
+
+       <main id="login">
+           <form method="POST" action="http://localhost:3000/login">
+               <p class = "errorMessage"><%=errorMessage%></p>
+               <h1>LOGIN</h1>
+               <p></p>
+               <hr>
+
+               <label for="customerID"><b>username</b></label>
+               <input type="text" placeholder='Enter Your Username' name = "customerID"><br>
+               <label for="psw"><b>Password</b></label>
+               <input type="password" placeholder="Enter Your Password" name = "password"><br>
+
+               <hr>
+
+               <button type="submit" class = "buttons">LOGIN</button>
+
+           </form>
+       </main>
+
+       <% include ../partials/footer.ejs %>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head.ejs %>
+
+<body>
+<% include ../partials/options.ejs %>
+
+<main id = "details">
+    <h1>DETAILS</h1>
+    <p><span class="orderAttribute">FIRST NAME:</span><%=customerDetails.fname%></p><br>
+    <p><span class="orderAttribute">LAST NAME:</span><%=customerDetails.lname%></p><br>
+    <p><span class="orderAttribute">ADDRESS:</span><%=customerDetails.address%></p><br>
+    <p><span class="orderAttribute">EMAIL: </span><%=customerDetails.email%></p><br>
+
+
+</main>
+
+<% include ../partials/footer.ejs %>
+</body>
+</html>

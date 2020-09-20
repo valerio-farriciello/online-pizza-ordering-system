@@ -1,0 +1,28 @@
+<header>
+	<h1 class = "welcome">WELCOME <span class = "username"><%=customerID%></span></h1>
+	<%if(isLoggedIn){%>
+		<h3><a href="/cart" id = "cart">CART</a></h3>
+		<h3><a href="/myDetails" id = "my_details">MY DETAILS</a></h3>
+		<h3><a href="/myOrders" id = "my_orders">MY ORDERS</a></h3>
+	<%}%>
+
+		<br>
+		<h1 id="main_title">PIZZERIA VESUVIO</h1>
+		<br>
+		<nav>
+		<br>
+			<p class="navig">
+				<a href="/" class="nav_bar">HOME</a>
+				<a href="/menu" class="nav_bar">MENU</a>
+				<a href="/personalisedPizzas" class="nav_bar">PERSONALISE YOUR PIZZA</a>
+				<%if(!isLoggedIn){%>
+					<a href="/register" class="nav_bar"><%="CREATE AN ACCOUNT";%></a>
+					<a href="/login" class="nav_bar"><%="LOG IN";%></a>
+				<%}else{%>
+					<a href="/logout" class="nav_bar"><%="LOG OUT";%></a>
+				<%}%>
+
+		    </p>
+		<br>
+		</nav>
+</header>

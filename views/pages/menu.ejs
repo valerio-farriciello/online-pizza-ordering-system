@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head.ejs %>
+
+    <body>
+       <% include ../partials/options.ejs %>
+
+       <main id="menu">
+        <!--REF. PICTURES:
+        wedges https://www.unileverfoodsolutions.lk/recipe/aromatic-potato-wedges-R0075325.html
+        twister fries http://www.thehutburger.com/friesnextras.html
+        garlic pizza bread https://www.dailyedge.ie/dominos-garlic-pizza-bread-is-amazing-2610476-Feb2016/
+        falafel https://nutritionrefined.com/air-fried-falafel/
+
+        americana https://fourstar.weborder.net/custom/images/Americana.jpg
+        empire state https://fourstar.weborder.net/custom/images/EmpireState.jpg
+        smokeyJoe https://fourstar.weborder.net/custom/images/SmokeyJoesBBQ.jpg
+        hawaiian https://fourstar.weborder.net/custom/images/HawaiiFiveOh.jpg
+        veg out https://fourstar.weborder.net/custom/images/VegOut.jpg
+        -->
+
+           <form name="setMenuItems" method="POST" action="http://localhost:3000/menu">
+               <table class = "menuTables">
+                   <p class = option>OUR PIZZAS:</p>
+                   <thead>
+                   <tr>
+                       <th scope="col">PICTURE</th>
+                       <th scope="col">PIZZA</th>
+                       <th scope="col">PRICE</th>
+                       <th scope="col">DESCRIPTION</th>
+                       <%if(isLoggedIn){%>
+                            <th scope="col">ORDER</th>
+                       <%}%>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <%for(let i = 0; i < pizzas.length; i++){%>
+                   <tr>
+                       <td><img src='<%=pizzas[i].name%>.jpg' alt = <%=pizzas[i].name%>></td>
+                       <td><%=pizzas[i].name%></td>
+                       <td><%=pizzas[i].price%></td>
+                       <td><%=pizzas[i].description%></td>
+                       <%if(isLoggedIn){%>
+                            <td>
+                                <p>QUANTITY:</p>
+                                <select name="pizzas">
+                                    <option value= 0<%=pizzas[i].setMenuPizzaID%>>0</option>
+                                    <option value= 1<%=pizzas[i].setMenuPizzaID%>>1</option>
+                                    <option value= 2<%=pizzas[i].setMenuPizzaID%>>2</option>
+                                    <option value= 3<%=pizzas[i].setMenuPizzaID%>>3</option>
+                                    <option value= 4<%=pizzas[i].setMenuPizzaID%>>4</option>
+                                    <option value= 5<%=pizzas[i].setMenuPizzaID%>>5</option>
+                                    <option value= 6<%=pizzas[i].setMenuPizzaID%>>6</option>
+                                    <option value= 7<%=pizzas[i].setMenuPizzaID%>>7</option>
+                                    <option value= 8<%=pizzas[i].setMenuPizzaID%>>8</option>
+                                    <option value= 9<%=pizzas[i].setMenuPizzaID%>>9</option>
+                                </select><br><br><br>
+
+                            </td>
+                       <%}%>
+                   </tr>
+                   <%}%>
+                   </tbody>
+               </table>
+
+               <table class = "menuTables">
+                   <p class = option>OUR SIDES:</p>
+                   <thead>
+                   <tr>
+                       <th scope="col">PICTURE</th>
+                       <th scope="col">SIDE</th>
+                       <th scope="col">PRICE</th>
+                       <th scope="col">DESCRIPTION</th>
+                       <%if(isLoggedIn){%>
+                            <th scope="col">ORDER</th>
+                       <%}%>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <%for(let i = 0; i < sides.length; i++){%>
+                   <tr>
+                       <td><img src='<%=sides[i].name%>.jpg' alt = <%=sides[i].name%>></td>
+                       <td><%=sides[i].name%></td>
+                       <td><%=sides[i].price%></td>
+                       <td><%=sides[i].description%></td>
+                       <%if(isLoggedIn){%>
+                            <td>
+                                <p>QUANTITY:</p>
+                                <select name="sides">
+                                    <option value= 0<%=sides[i].sideID%>>0</option>
+                                    <option value= 1<%=sides[i].sideID%>>1</option>
+                                    <option value= 2<%=sides[i].sideID%>>2</option>
+                                    <option value= 3<%=sides[i].sideID%>>3</option>
+                                    <option value= 4<%=sides[i].sideID%>>4</option>
+                                    <option value= 5<%=sides[i].sideID%>>5</option>
+                                    <option value= 6<%=sides[i].sideID%>>6</option>
+                                    <option value= 7<%=sides[i].sideID%>>7</option>
+                                    <option value= 8<%=sides[i].sideID%>>8</option>
+                                    <option value= 9<%=sides[i].sideID%>>9</option>
+                                </select><br><br><br>
+                            </td>
+                       <%}%>
+                   </tr>
+                   <%}%>
+                   </tbody>
+               </table>
+               <%if(isLoggedIn){%>
+                    <button class = "buttons" type="submit">Add to your cart</button>
+               <%}%>
+           </form>
+
+       </main>
+
+       <% include ../partials/footer.ejs %>
+    </body>
+</html>

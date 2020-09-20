@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include ../partials/head.ejs %>
+
+    <body>
+       <% include ../partials/options.ejs %>
+
+       <main id="cartMain">
+           <h2>YOUR CURRENT ORDER:</h2>
+
+           <form name="setMenuItems" method="POST" action="http://localhost:3000/cart">
+           <%if(totalPrice !== 0){%>
+           <table class="tables">
+
+               <tr>
+                   <th>PICTURE</th>
+                   <th>ITEM</th>
+                   <th>QTY</th>
+                   <th>PRICE</th>
+                   <th>REMOVE ITEM</th>
+               </tr>
+               <%for(let i = 0; i < currentOrders[0].itemID.length; i++){%>
+                   <tr>
+                       <td><img src='<%=currentOrders[0].itemName[i]%>.jpg' alt = <%=currentOrders[1].itemName[i]%>></td>
+                       <td><%=currentOrders[0].itemName[i]%></td>
+                       <td><%=currentOrders[0].qty[i]%></td>
+                       <td><%=currentOrders[0].price[i]%></td>
+
+                       <td>
+                           <input type="checkbox" name = "itemID" value = <%=currentOrders[0].itemID[i]%> >
+                       </td>
+                   </tr>
+               <%}%>
+               <%for(let i = 0; i < currentOrders[1].itemID.length; i++){%>
+               <tr>
+                   <td><img src='<%=currentOrders[1].itemName[i]%>.jpg' alt = <%=currentOrders[1].itemName[i]%>></td>
+                   <td><%=currentOrders[1].itemName[i]%></td>
+                   <td><%=currentOrders[1].qty[i]%></td>
+                   <td>€<%=currentOrders[1].price[i]%></td>
+
+                   <td>
+                       <input type="checkbox" name = "itemID" value = <%=currentOrders[1].itemID[i]%> >
+                   </td>
+               </tr>
+               <%}%>
+           </table><br><br><br>
+
+            <!--TABLE FOR PERSONALIZED PIZZAS-->
+               <table class="tables">
+                   <tr>
+                       <th>PERSONALISED PIZZA</th>
+                       <th>CRUST SIZE</th>
+                       <th>CRUST FLAVOR</th>
+                       <th>CHEESE</th>
+                       <th>TOPPINGS</th>
+                       <th>SAUCE</th>
+                       <th>QUANTITY</th>
+                       <th>PRICE</th>
+                       <th>REMOVE ITEM</th>
+                   </tr>
+
+                   <%for(let i = 0; i < currentOrders[2].crustSize.length; i++){%>
+                   <tr>
+                       <td><%=`# ${(i+1)}`%></td>
+                       <td><%=currentOrders[2].crustSize[i]%></td>
+                       <td><%=currentOrders[2].crustFlavor[i]%></td>
+                       <td><%=currentOrders[2].cheese[i]%></td>
+                       <td><%=currentOrders[2].toppings[i]%></td>
+                       <td><%=currentOrders[2].sauce[i]%></td>
+                       <td><%=currentOrders[2].quantity[i]%></td>
+                       <td><%=currentOrders[2].price[i]%></td>
+
+                       <td>
+                           <input type="checkbox" name = "personalisedPizzaIndex" value = <%=i%> >
+                       </td>
+                   </tr>
+                   <%}%>
+               </table><br><br><br>
+
+
+               <button type="submit" class = "buttons">Remove selected item/s</button>
+               <%}%>
+           </form>
+           <p id="total">TOTAL PRICE: €<%=totalPrice%></p>
+
+
+           <p id ="note">NOTE: if you place the order for delivery, 4 euro will be charged over the total amount due the delivery charge.</p>
+       </main>
+
+       <%if(totalPrice !== 0){%>
+           <p id="collectionAndDeliveryLine"><a href="/collection" id="collectionOp">COLLECTION</a><a href="/delivery" id="deliveryOp">DELIVERY</a></p>
+       <%}%>
+
+
+       <% include ../partials/footer.ejs %>
+    </body>
+</html>

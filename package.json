@@ -1,0 +1,17 @@
+{
+  "name": "pizzaOrderingSystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon view.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.2",
+    "nodemon": "^1.19.4",
+    "sqlite3": "^4.1.0"
+  }
+}

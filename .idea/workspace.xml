@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56da0480-fcce-4667-abeb-b24d537d95ff" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ToLDJhZDuyxvtmJCa22QzQGkbe" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="NodeJSConfigurationType" node-parameters="C:\Users\35387\Desktop\Server-side-Web-Dev\PROJECT\PIZZERIA\pizzaOrderingSystem\node_modules\nodemon\bin\nodemon.js">
+      <method v="2" />
+    </configuration>
+    <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="C:\Users\35387\Desktop\Server-side-Web-Dev\PROJECT\PIZZERIA\pizzaOrderingSystem\node_modules\nodemon\bin\nodemon.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.server.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56da0480-fcce-4667-abeb-b24d537d95ff" name="Default Changelist" comment="" />
+      <created>1574121380415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574121380415</updated>
+      <workItem from="1574121381496" duration="154000" />
+      <workItem from="1574121647573" duration="252000" />
+      <workItem from="1574154189707" duration="156000" />
+      <workItem from="1574334549512" duration="191000" />
+      <workItem from="1574337751531" duration="676000" />
+      <workItem from="1574338450496" duration="2665000" />
+      <workItem from="1574344296657" duration="310000" />
+      <workItem from="1574537775655" duration="2649000" />
+      <workItem from="1574599024697" duration="23893000" />
+      <workItem from="1574634972211" duration="2073000" />
+      <workItem from="1574668888960" duration="7398000" />
+      <workItem from="1574677949660" duration="1434000" />
+      <workItem from="1575013476013" duration="6414000" />
+      <workItem from="1575044378226" duration="3692000" />
+      <workItem from="1575122526288" duration="2308000" />
+      <workItem from="1575127581615" duration="3194000" />
+      <workItem from="1575536673910" duration="143000" />
+      <workItem from="1575546290096" duration="12504000" />
+      <workItem from="1575559049420" duration="12322000" />
+      <workItem from="1575723184182" duration="6946000" />
+      <workItem from="1575820927474" duration="7684000" />
+      <workItem from="1575837463990" duration="6120000" />
+      <workItem from="1575896259865" duration="2907000" />
+      <workItem from="1575900420257" duration="7609000" />
+      <workItem from="1575915262705" duration="2672000" />
+      <workItem from="1575922463199" duration="14289000" />
+      <workItem from="1575991830462" duration="189000" />
+      <workItem from="1576000369657" duration="1085000" />
+      <workItem from="1576001482559" duration="11291000" />
+      <workItem from="1576016516801" duration="11519000" />
+      <workItem from="1576046642028" duration="1120000" />
+      <workItem from="1576049938823" duration="5307000" />
+      <workItem from="1576056924443" duration="2192000" />
+      <workItem from="1576059261505" duration="7079000" />
+      <workItem from="1576066449113" duration="1676000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

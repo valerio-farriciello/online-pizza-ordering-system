@@ -1,0 +1,361 @@
+body{
+    background-color: #9e9081;
+}
+
+#vegetarian{
+     display: none;
+}
+#notVegetarian{
+    display: none;
+}
+
+#showOnClick{
+     display: none;
+}
+
+.buttons {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 35px;
+    border-radius: 50%;
+    margin-left: 36.8%;
+
+}
+.buttons:hover {
+    background-color: tomato;
+}
+
+
+nav {
+    margin: 0.5% 0.2% 0.5%;
+    padding: 1%;
+
+}
+#cart{
+    font-family: Forte, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin: 0.5em;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#my_details {
+    font-family: Forte, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin: 0.5em;
+    top: 20px;
+}
+
+#my_orders{
+    font-family: Forte, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin: 0.5em;
+    top: 150px;
+}
+
+#cart:hover{
+    background-color: #39ac73;
+
+}
+
+#main_title {
+    background: #9e9081;
+    font-size: 70px;
+    text-align: center;
+    font-family: Stencil, sans-serif;
+
+}
+
+p.navig {
+    font-family: Forte, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar {
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin: 0.5em;
+    font-family: Showcard Gothic, sans-serif;
+}
+.nav_bar:hover {
+    background-color: #39ac73;
+}
+
+.welcome{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+}
+.username{
+    color: red;
+}
+
+#personalisedPizza{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.option{
+    border: 5px solid black;
+    font-size: 35px;
+    background-color: crimson;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#optionVeg{
+    border: 5px solid black;
+    font-size: 35px;
+    background-color: darkcyan;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#orders{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.orderAttribute{
+    color: crimson;
+}
+
+
+.itemAttribute{
+    color: darkcyan;
+}
+
+.cyoAttribute{
+    color: forestgreen;
+}
+
+hr{
+    size: 20px;
+    color: black;
+    border-width: 3px;
+}
+
+#registerMain{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#login{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#details{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#orderPlaced{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.errorMessage{
+    color: red;
+}
+
+#index{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#vesuvioPic{
+    border: 5px solid black;
+}
+
+#cartMain{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.tables {
+    width:100%;
+    border:4px solid #000000;
+    border-collapse:collapse;
+    padding:5px;
+}
+.tables th {
+    border:4px solid #000000;
+    padding:5px;
+    background:#F0F0F0;
+}
+.tables td {
+    border:4px solid #000000;
+    text-align:center;
+    padding:5px;
+}
+
+input[type="checkbox"]{
+     width: 30px;
+     height: 30px;
+ }
+
+input[type="text"]{
+    width: 300px;
+    height: 22px;
+}
+
+input[type="email"]{
+    width: 300px;
+    height: 22px;
+}
+
+input[type="password"]{
+    width: 300px;
+    height: 22px;
+}
+
+input[type="radio"]{
+    width: 30px;
+    height: 30px;
+}
+
+.menuTables {
+    width:100%;
+    border:4px groove #000000;
+    border-collapse:collapse;
+    padding:5px;
+}
+.menuTables th {
+    border:4px groove #000000;
+    padding:5px;
+    background:#FF8000;
+}
+.menuTables td {
+    border:4px groove #000000;
+    text-align:center;
+    padding:5px;
+    background:#C0C0C0;
+}
+
+#collectionOp{
+    border: 2px solid black;
+    background-color: crimson;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+#collectionOp:hover{
+    background-color: aquamarine;
+}
+
+#deliveryOp{
+    border: 2px solid black;
+    background-color: crimson;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+#deliveryOp:hover{
+    background-color: aquamarine;
+}
+
+#collectionAndDeliveryLine{
+    text-align: center;
+}
+
+#collection{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#delivery{
+    border: 5px solid black;
+    background-color: #ffd11a;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#menu{
+    font-family: Showcard Gothic, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+#total{
+    font-size: 25px;
+}
+
+#note{
+    color: forestgreen;
+}
